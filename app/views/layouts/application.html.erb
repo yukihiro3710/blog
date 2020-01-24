@@ -15,7 +15,10 @@
     <%= link_to "Blog", root_path, class: "header__title--text" %>
     </div>
     <div class="header__right">
-    <%= link_to "新規投稿", new_post_path, class: "header__right--btn"%>
+    <% if user_signed__ri%>
+    <%= link_to "ログイン", new_model_session_path, class: "header__right--btn "%>
+    <%= link_to "新規登録", new_model_registration_path, class: "header__right--btn"%>
+    
     </div>
     </header>
     <div class="contents">

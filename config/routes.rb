@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :models
   root to: "posts#index"
-  resources :posts,only: [:new, :create]
+  resources :posts, except: :index
 end
+
+  
